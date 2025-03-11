@@ -13,6 +13,7 @@ html {
 
 header {
     background-color: #00cad1;
+    height: 90px;
 }
 
 .topo {
@@ -21,6 +22,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    & img {
+        margin-top: 9px;
+        width: 150px;
+    }
 
     & a {
         color: #fff;
@@ -525,6 +531,7 @@ a:hover {
 @media (min-width: 768px) and (max-width: 1023px) {
     header {
         background-color: #00cad1;
+        height: 80px;
     }
 
     .topo {
@@ -533,6 +540,11 @@ a:hover {
         flex-flow: row;
         justify-content: space-around;
         align-items: center;
+
+        & img {
+            margin-top: 0px;
+            width: 150px;
+        }
 
         & a {
             color: #fff;
@@ -777,11 +789,17 @@ a:hover {
 @media (min-width: 319px) and (max-width: 428px) {
     header {
         background-color: #00cad1;
+        height: 136px;
     }
 
     .topo {
         display: flex;
         flex-flow: column wrap;
+
+        & img {
+            margin-top: 0px;
+            width: 150px;
+        }
 
         & a {
             color: #fff;

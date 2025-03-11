@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ESTILIZANDO TOPO */
+.container-topo {
+    background-color: #00cad1;
+    width: 100%;
+}
+
+.topo {
+    max-width: 1024px;
+    height: 90px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    & img {
+        margin-top: 9px;
+        width: 150px;
+    }
+
+    & .links-nav {
+        display: flex;
+        gap: 20px;
+
+        & a {
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        & a:hover {
+            color: #0c6e71;
+            transition: 300ms;
+        }
+    }
+
+    & img:hover {
+        animation: pulse 1.5s infinite;
+        transition: 300ms;
+    }
+}
+
+.container-links-nav {
+    max-width: 1024px;
+    height: 30px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    & .links-especialidades {
+        display: flex;
+        gap: 20px;
+
+        & a {
+            color: #000000;
+            border-bottom: 2px solid #00cad1;
+            font-size: 18px;
+        }
+
+        & a:hover {
+            border-bottom: 2px solid #24e2e9;
+            color: #00cad1;
+            transition: 300ms;
+        }
+    }
+}
+/* FIM ESTILIZAÇÃO TOPO */
+
+main {
+    width: 100%;
+}
+
+/* LINKS DE NAVEGAÇÃO ENTRE ESPECIALIDADES */
+#especialidades {
+    max-width: 1024px;
+    margin: 30px auto 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    & h3 {
+        font-size: 25px;
+        color: #807c7d;
+    }
+}
+/* FIM DOS LINKS */
+
+/* DESCRITIVA DE CADA ESPECIALIDADE */
+.container-descricao {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+
+    & h4 {
+        font-size: 20px;
+        color: #807c7d;
+    }
+
+    & p {
+        width: 500px;
+        margin: 0 auto;
+        color: #807c7d;
+    }
+}
+/* FIM DESCRITIVA */
+
+/* ESTILIZANDO TABELAS */
+.tabelas {
+    max-width: 1024px;
+    margin: 10px auto 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    & img {
+        display: flex;
+        flex: 0 1 250px;
+        width: 250px;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    & table {
+        width: 600px;
+        border-collapse: collapse;
+
+        & thead {
+            text-align: left;
+            background-color: #00cad1;
+
+            & th {
+                padding: 8px;
+                color: #ffffff;
+            }
+        }
+
+        & tbody {
+            font-size: 15px;
+            color: #807c7d;
+
+            & tr:nth-child(odd) {
+                background-color: #cdcdcd;
+            }
+
+            & tr:nth-child(even) {
+                background-color: #f1f1f1;
+            }
+
+            & td {
+                padding: 20px 8px;
+            }
+
+            & .geriatria {
+                padding: 15px 8px;
+            }
+
+            & .fisioterapia {
+                padding: 10px 8px;
+            }
+        }
+    }
+}
+/* FIM ESTILIZAÇÃO TABELAS */
+
+/* ESTILIZANDO RODAPÉ */
+#rodape {
+    width: 100%;
+    height: 265px;
+    background-color: #0c6e71;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.container-rodape {
+    max-width: 1024px;
+    margin: 40px auto 0 auto;
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 18px;
+
+    & img {
+        width: 150px;
+    }
+}
+
+.texto-rodape {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 15px;
+
+    & p {
+        font-size: 18px;
+        color: #ffffff;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .topo {
+        max-width: 720px;
+    }
+
+    .container-descricao {
+        width: 100%;
+        max-width: 720px;
+    }
+
+    .tabelas {
+        max-width: 720px;
+
+        & table {
+            width: 100%;
+            max-width: 720px;
+        }
+    }
+    .tabelas img {
+        display: none;
+    }
+
+    #rodape {
+        width: 100%;
+        height: 260px;
+    }
+
+    .container-rodape {
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 319px) and (max-width: 428px) {
+    .container-topo {
+        /* max-width: 100%; */
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: center;
+        min-height: 168px;
+
+        & .topo {
+            justify-content: center;
+            align-items: center;
+
+            & figure {
+                display: flex;
+                justify-content: center;
+                width: 95%;
+                margin: 0 auto;
+                border-bottom: 2px solid #0eb6be;
+
+                & img {
+                    width: 180px;
+                }
+            }
+
+            & .links-nav {
+                margin-top: 14px;
+                display: flex;
+                gap: 58px;
+
+                & a {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+
+    .tabelas img {
+        display: none;
+    }
+
+    .container-links-nav {
+        width: 100%;
+        height: 80px;
+        /* max-width: 410px; */
+        display: flex;
+        /* flex: 1 0; */
+        flex-wrap: wrap;
+        justify-content: center;
+
+        & .links-especialidades {
+            display: flex;
+            width: 100%;
+            /* flex: 1 0; */
+            flex-wrap: wrap;
+            justify-content: center;
+
+            & a {
+                font-size: 21px;
+            }
+        }
+    }
+}
+
+/* Animações */
+@keyframes pulse {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        transform: scale(1.2) rotate(0deg); /* Cresce um pouco */
+    }
+    100% {
+        transform: scale(1) rotate(0deg); /* Retorna ao tamanho original */
+    }
+}

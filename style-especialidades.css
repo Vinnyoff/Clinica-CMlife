@@ -281,6 +281,12 @@ main {
         }
     }
 
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     .tabelas img {
         display: none;
     }

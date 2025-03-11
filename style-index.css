@@ -5,6 +5,10 @@
     font-family: "Source Sans Pro", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* topo da pagina */
 
 header {
@@ -35,9 +39,10 @@ header {
 /* Banner */
 .banner {
     width: 100%;
-    height: 60vh;
+    height: 500px;
     background-image: url(assets/recepcao2.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
     object-fit: cover;
 
     display: flex;
@@ -49,6 +54,7 @@ header {
     background-image: url(assets/recepcao.png);
     background-size: cover;
     object-fit: cover;
+    transition: 300ms;
 
     & p {
         color: #fff;
@@ -184,6 +190,7 @@ header {
 
 .cards:hover {
     transform: scale(1.1);
+    transition: 300ms;
 }
 
 .botao {
@@ -196,6 +203,10 @@ header {
         background-color: #00cad1;
         color: #ffffff;
     }
+}
+
+a:hover {
+    color: #0c6e71;
 }
 
 .contato {
@@ -255,7 +266,515 @@ header {
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 1024px) {
+    header {
+        background-color: #00cad1;
+    }
+
+    .topo {
+        max-width: 1024px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & a {
+            color: #fff;
+            padding: 5px;
+            margin-left: 10px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+
+    .logo-topo img:hover {
+        animation: pulse 1.5s infinite;
+    }
+    /* fim topo */
+
+    /* Banner */
+    .banner {
+        width: 100%;
+        height: 400px;
+        background-image: url(assets/recepcao2.jpg);
+        background-size: cover;
+        object-fit: cover;
+
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+
+    .banner:hover {
+        background-image: url(assets/recepcao.png);
+        background-size: cover;
+        object-fit: cover;
+        transition: 300ms;
+
+        & p {
+            color: #fff;
+            text-shadow: 5px 5px 10px #000000;
+        }
+    }
+
+    .texto-banner {
+        width: 100%;
+        max-width: 1024px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+
+        & p {
+            color: #ffffff;
+            font-size: 40px;
+            text-transform: uppercase;
+        }
+    }
+    /* Fim banner */
+
+    .container-sobre {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+
+    .sobre {
+        width: 100%;
+        max-width: 1024px;
+        margin: 50px auto;
+        display: flex;
+        flex-flow: column wrap;
+        text-align: center;
+        gap: 20px;
+
+        & h3 {
+            color: #807c7d;
+            font-size: 25px;
+        }
+
+        & p {
+            color: #807c7d;
+            font-size: 18px;
+        }
+    }
+
+    .container-texto {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+
+    .medico {
+        flex: 1;
+        max-width: 220px;
+    }
+
+    .texto {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        & h4 {
+            font-size: 25px;
+            font-weight: normal;
+            text-transform: uppercase;
+            color: #807c7d;
+        }
+
+        & ul {
+            margin-left: 50px;
+        }
+
+        & li {
+            color: #807c7d;
+            font-size: 18px;
+        }
+    }
+
+    /* .sobre-texto {
+        max-width: 1024px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        & h4 {
+            font-size: 25px;
+            font-weight: normal;
+            text-transform: uppercase;
+            color: #807c7d;
+        }
+    
+        & ul {
+            margin-top: 40px;
+        }
+    
+        & li {
+            color: #807c7d;
+            font-size: 18px;
+        }
+    } */
+
+    .container-cards {
+        width: 100%;
+        max-width: 1024px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        gap: 45px;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        height: 230px;
+        box-shadow: 3px 3px 15px #000000;
+
+        & img {
+            width: 280px;
+        }
+
+        & figcaption {
+            text-align: center;
+            color: #807c7d;
+            margin-top: 8px;
+        }
+    }
+
+    .cards:hover {
+        transform: scale(1.1);
+        transition: 300ms;
+    }
+
+    .botao {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+
+        & a {
+            padding: 12px 20px;
+            background-color: #00cad1;
+            color: #ffffff;
+        }
+    }
+
+    a:hover {
+        color: #0c6e71;
+    }
+
+    .contato {
+        width: 100%;
+        max-width: 1024px;
+        margin: 50px auto;
+        display: flex;
+        flex-flow: column wrap;
+        text-align: center;
+        gap: 20px;
+
+        & h3 {
+            color: #807c7d;
+            font-size: 25px;
+        }
+
+        & p {
+            color: #807c7d;
+            font-size: 18px;
+        }
+    }
+
+    .destaque {
+        color: #585858;
+        font-weight: 700;
+    }
+
+    #rodape {
+        width: 100%;
+        height: 265px;
+        background-color: #0c6e71;
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .container-rodape {
+        max-width: 1024px;
+        margin: 40px auto 0 auto;
+        text-align: center;
+        display: flex;
+        flex-flow: column wrap;
+        gap: 18px;
+
+        & img {
+            width: 150px;
+        }
+    }
+
+    .texto-rodape {
+        display: flex;
+        flex-flow: column wrap;
+        gap: 15px;
+
+        & p {
+            font-size: 18px;
+            color: #ffffff;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    header {
+        background-color: #00cad1;
+    }
+
+    .topo {
+        max-width: 730px;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        align-items: center;
+
+        & a {
+            color: #fff;
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        & div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            height: 45px;
+        }
+    }
+
+    .logo-topo {
+        width: 100%;
+        height: 80px;
+        border-bottom: none;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5px;
+
+        & img {
+            width: 130px;
+        }
+    }
+
+    .logo-topo img:hover {
+        animation: pulse 1.5s infinite;
+    }
+    /* fim topo */
+
+    /* Banner */
+    .banner {
+        width: 100%;
+        height: 300px;
+        background-image: url(assets/recepcao2.jpg);
+        background-size: cover;
+        object-fit: cover;
+
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+
+    .banner:hover {
+        background-image: url(assets/recepcao.png);
+        background-size: cover;
+        object-fit: cover;
+
+        & p {
+            color: #fff;
+            text-shadow: 5px 5px 10px #000000;
+        }
+    }
+
+    .texto-banner {
+        width: 95%;
+        /* max-width: 1024px; */
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-evenly; */
+        align-items: flex-start;
+
+        & p {
+            color: #ffffff;
+            font-size: 27px;
+            text-transform: uppercase;
+            margin-left: 10px;
+        }
+    }
+    /* Fim banner */
+
+    .container-sobre {
+        width: 720px;
+        margin: 0 auto;
+    }
+
+    .sobre {
+        width: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        text-align: center;
+        gap: 20px;
+
+        & h3 {
+            color: #807c7d;
+            font-size: 25px;
+        }
+
+        & p {
+            color: #807c7d;
+            font-size: 18px;
+        }
+    }
+
+    .container-texto {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 380px;
+        margin: 0 auto;
+    }
+
+    .medico {
+        flex: 1;
+        max-width: 220px;
+        display: none;
+    }
+
+    .texto {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        & h4 {
+            font-size: 19px;
+            font-weight: normal;
+            text-transform: uppercase;
+            color: #807c7d;
+        }
+
+        & ul {
+            margin-left: 40px;
+        }
+
+        & li {
+            color: #807c7d;
+            font-size: 16px;
+        }
+    }
+
+    .container-cards {
+        width: 100%;
+        /* max-width: 1024px; */
+        /* margin: 0 auto; */
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 45px;
+        flex: 0 1 280px;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        height: 260px;
+        box-shadow: 3px 3px 15px #000000;
+
+        & img {
+            width: 325px;
+        }
+
+        & figcaption {
+            text-align: center;
+            color: #807c7d;
+            margin-top: 8px;
+        }
+    }
+
+    .cards:hover {
+        transform: scale(1.1);
+    }
+
+    .botao {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+
+        & a {
+            padding: 12px 20px;
+            background-color: #00cad1;
+            color: #ffffff;
+        }
+    }
+
+    .contato {
+        width: 100%;
+        max-width: 720px;
+        margin: 50px auto;
+        display: flex;
+        flex-flow: column wrap;
+        text-align: center;
+        gap: 20px;
+
+        & h3 {
+            color: #807c7d;
+            font-size: 25px;
+        }
+
+        & p {
+            color: #807c7d;
+            font-size: 18px;
+        }
+    }
+
+    iframe {
+        max-width: 720px;
+        height: 250px;
+    }
+
+    .destaque {
+        color: #585858;
+        font-weight: 700;
+    }
+
+    #rodape {
+        width: 100%;
+        height: 230px;
+        background-color: #0c6e71;
+        display: flex;
+        flex-flow: column;
+    }
+
+    .container-rodape {
+        max-width: 720px;
+        margin: 20px auto 0 auto;
+        text-align: center;
+        display: flex;
+        flex-flow: column wrap;
+        gap: 18px;
+
+        & img {
+            width: 120px;
+        }
+    }
+
+    .texto-rodape {
+        display: flex;
+        flex-flow: column wrap;
+        gap: 15px;
+
+        & p {
+            font-size: 15px;
+            color: #ffffff;
+        }
+    }
+}
+
+@media (min-width: 319px) and (max-width: 428px) {
     header {
         background-color: #00cad1;
     }
